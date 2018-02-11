@@ -1,7 +1,7 @@
 .header{
-    width: 100vw;
     position: relative;
     height: 100vh;
+    max-width: 100vw;
 
     &__bg{
         overflow: hidden;
@@ -45,6 +45,10 @@
 
     &__strips{
         margin-top: 30vh;
+
+        &-container{
+            position: relative;
+        }
     }
     
     &__strip{
@@ -52,13 +56,64 @@
         height: 150px;
 
         &--left{
-            left: 0;
-            max-width: 800px;
+            left: -62vw;
+            width: 62vw;
         }
         &--right{
-            right: 0;
-            max-width: 300px;
+            right: -7vw;
+            width: 7vw;
         }
     }
+    &__video{
+        position: absolute;
+        top: -150px;
+        display: none;
+    }
 
+    &__title{
+        position: absolute;
+        left: 55vw;
+        max-width: 17vw;
+        margin: 0;
+        text-transform: uppercase;
+        color: white;
+        display: none;
+    }
+
+    &__frame{
+        position: absolute;
+        right: 0;
+        width: 270px;
+        top: -130px;
+        display: none;
+    }
+
+    & .js-menu{
+        display: none;
+    }
+
+}
+
+
+.fixed-btn{
+    position: fixed;
+    transform: translateX(150%);
+    right: 10px;
+    z-index: 99;
+    background-color: #1a2980;
+    border-radius: 60px;
+    padding: 10px;
+    border: 15px solid #b195e4;
+
+    &__img{
+        width: 30px;
+        height: 26px;
+    }
+
+    &--order{
+        top: 80px;
+    }
+    &--cellback{
+        top: 190px;
+    }
 }

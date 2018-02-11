@@ -1,5 +1,7 @@
-//header bg
+'use strict';
 
+//Functions for the HEADER
+//header bg
 var refreshDuration = 10000;
 var refreshTimeout;
 var numPointsX;
@@ -121,3 +123,62 @@ function onResize() {
 
 window.onload = onLoad;
 window.onresize = onResize;
+
+//animations header
+function animatedHeader(){
+    $('.js-strip-l').animate({
+        left: "+=62vw"
+      }, 2000);
+
+      $('.js-strip-r').animate({
+          right: "+=7vw"
+        }, 2000, function() {
+            showVideo();
+            showTitle();
+            setTimeout(showMenuAndBtns, 700);
+          });
+}
+
+//Show video
+function showVideo(){
+    $('.js-show-video').animate({height: "show"}, 1000);
+}
+
+//Show title
+function showTitle(){
+    $('.js-header-title').animate({height: "show"}, 1000); 
+    $('.js-frame').animate({height: "show"}, 1000);
+}
+//Show menu
+function showMenuAndBtns(){
+    $('.js-menu').animate({height: "show"}, 1000);
+    $('.js-fixed-btn').css({transform: 'translateX(0)', transition: '1s ease-in'});
+}
+
+animatedHeader();
+
+//The end functions for the HEADER
+
+//Slider Slick (section slider)
+$(document).ready(function(){
+    $(".js-slider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        zIndex: 0,
+        centerMode: true,
+        prevArrow: '<div class="slick-arrow-prev"></div>',
+        nextArrow: '<div class="slick-arrow-next"></div>',
+        centerPadding: '200px',
+    });
+    });
+//The end Slider Slick (section slider)
+
+
+
+
+
+
+
+

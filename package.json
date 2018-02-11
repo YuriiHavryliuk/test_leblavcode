@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "test_leblavcode",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "aos": "^2.2.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.21.0",
     "del": "^3.0.0",

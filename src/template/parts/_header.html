@@ -4,7 +4,7 @@
 		<div class="header__logo">
 			<img src="img/logo.svg" alt="Logo"/>
 		</div>
-		<nav class="header__nav">
+		<nav class="header__nav js-menu">
 			<ul class="heeader__menu menu">
 				<li class="menu__item">
 					<a href="#" class="menu__link">Home</a>
@@ -27,8 +27,19 @@
 			</ul>
 		</nav>
 	</div>
+		<a class="fixed-btn fixed-btn--order js-fixed-btn" href="#"><img class="fixed-btn__img" src="img/order.svg" alt="Order"/></a>
+		<a class="fixed-btn fixed-btn--cellback js-fixed-btn" href="#"><img class="fixed-btn__img" src="img/cellback.svg" alt="Cellback"/></a>
 	<div class="header__strips">
-		<img class="header__strip header__strip--left" src="img/scrip-left.png" alt="Strip-left">
-		<img class="header__strip header__strip--right" src="img/strip-right.png" alt="Strip-right">
+		<div class="header__strips-container">
+			<img class="header__strip header__strip--left js-strip-l" src="img/scrip-left.png" alt="Strip-left">
+			<div class="container">	
+					<div class="header__video js-show-video">
+						<iframe src="https://player.vimeo.com/video/212862993?color=ffffff&title=0&byline=0&portrait=0" width="700" height="444" frameborder="0" webkitallowfullscreen mozallowfullscreen ></iframe>
+					</div>
+			<h1 class="header__title js-header-title">Energy efficient Ventilation means</h1>
+			<img class="header__frame js-frame" src="img/frame.png" alt="Frame">
+			</div>
+		</div>
+		<img class="header__strip header__strip--right js-strip-r" src="img/strip-right.png" alt="Strip-right">
 	</div>
 </header>
